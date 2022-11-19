@@ -1,18 +1,18 @@
 {% set name = "nerval" %}
-{% set version = "1.0.9" %}
+{% set version = "1.1.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e494f92b792404d01be26ead4839d7d3a9caad66cda926e473f4c68ae7d43d69
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 195f15e7294ca565537729468493fac15afbfe8ba63aa2dfedf29123bb3010dc
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,13 +30,13 @@ test:
     - nerval
 
 about:
-  home: "https://github.com/mdadda/nerval"
+  home: https://github.com/mdadda/nerval
   license: MIT
   license_family: MIT
   license_file: LICENCE.txt
-  summary: "Entity-level confusion matrix and classification report to evaluate Named Entity Recognition (NER) models."
+  summary: Entity-level confusion matrix and classification report to evaluate Named Entity Recognition (NER) models.
   doc_url:
-  dev_url: "https://github.com/mdadda/nerval"
+  dev_url: https://github.com/mdadda/nerval
 
 extra:
   recipe-maintainers:
