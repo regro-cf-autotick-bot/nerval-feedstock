@@ -1,5 +1,5 @@
 {% set name = "nerval" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 195f15e7294ca565537729468493fac15afbfe8ba63aa2dfedf29123bb3010dc
+  sha256: f296ed52e7b9d501a00f92cfb5daecfcf67d493d190f04d54b3d72cfccf23b69
 
 build:
   number: 0
